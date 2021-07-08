@@ -7,17 +7,8 @@
 ------------------------------
 """
 from wsgiref.simple_server import make_server
-from utils.read_data_utils import *
+from urls import *
 
-
-def login(environ):
-    return read_data('html/login.html')
-
-def index(environ):
-    return read_data('html/index.html')
-
-def favicon(environ):
-    return read_data('images/favicon.ico')
 
 
 def application(environ,start_response):
@@ -35,11 +26,7 @@ def application(environ,start_response):
     #     data = read_data(path='html/404notFound.html')
     # return [data.encode('utf8')]
 
-    url_patterns=[
-        ('/login',login),
-        ('/index',index),
-        ('/favicon.ico',favicon)
-    ]
+
 
     func = None
     for item in url_patterns:
