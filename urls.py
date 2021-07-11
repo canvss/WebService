@@ -9,6 +9,7 @@
 from views import *
 
 url_patterns=[
+        ('/login/',login),
         ('/login',login),
         ('/index',index),
         ('/favicon.ico',favicon)

@@ -10,8 +10,6 @@ while True:
     conn, addr = socket.accept()
     data = conn.recv(1024)
 
-    data = json.loads(data)
-
 # 读取html文件
 with open("html/login.html", "rb") as f:
     data = f.read()

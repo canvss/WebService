@@ -9,10 +9,11 @@
 from utils.read_data_utils import *
 
 def login(environ):
-    return read_data('html/login.html')
-
+    if environ.get('REQUEST_METHOD') == 'POST':
+        pass
+    elif environ.get('REQUEST_METHOD') == 'GET':
+        return read_data('html/login.html')
 def index(environ):
-    return read_data('html/index.html')
-
+    print(environ)
 def favicon(environ):
     return read_data('images/favicon.ico')

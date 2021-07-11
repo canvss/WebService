@@ -16,17 +16,6 @@ def application(environ,start_response):
     pathinfo = environ.get('PATH_INFO')
     # 返回响应头设置
     start_response("200 OK", [('Content-Type', 'text/html; charset=utf-8')])
-    # if pathinfo == '/favicon.ico':
-    #     return [read_data(path='images/favicon.ico')]
-    # elif pathinfo == '/login':
-    #     data = read_data(path='html/login.html')
-    # elif pathinfo == '/index':
-    #     data = read_data(path='html/index.html')
-    # else:
-    #     data = read_data(path='html/404notFound.html')
-    # return [data.encode('utf8')]
-
-
 
     func = None
     for item in url_patterns:
@@ -37,8 +26,11 @@ def application(environ,start_response):
     if func:
         return [func(environ)]
     else:
-        print('this is 404 not found!!')
         return [read_data('html/404notFound.html')]
-httped = make_server('127.0.0.1',8881,application)
+
+addr = '127.0.0.1'
+port = 8086
+httped = make_server(addr,port,application)
+print('web服务器启动成功！%s:%s'%(addr,port))
 # 开始监听http请求
 httped.serve_forever()
