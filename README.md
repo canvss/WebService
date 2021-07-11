@@ -173,3 +173,5 @@ def read_data(path):
 ### 当服务器找不到该资源，将返回404页面
 
 ![](./node_file/img_5.png)
+
+### 数据库操作
