@@ -1,6 +1,10 @@
 # DiyWebService
 ### 手写一个web服务器
 
+###### 实现 HTTP Server 必知的前置知识既然，我们要实现 HTTP Server 那必然先要回顾一下 HTTP 协议相关的基础知识。HTTP 协议超文本传输协议（HTTP，HyperText Transfer Protocol)主要是为 Web 浏览器与 Web 服务器之间的通信而设计的。当我们使用浏览器浏览网页的时候，我们网页就是通过 HTTP 请求进行加载的，整个过程如下图所示。
+
+![](./node_file/img_6.png)
+
 ### 创建一个socket对象
 
 ```python
