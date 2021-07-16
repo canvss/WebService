@@ -93,8 +93,8 @@ while True:
     response = 'HTTP/1.1 200 ok \r\n\r\n %s' % data
     conn.send(response.encode('utf-8'))
     conn.close()
-```
 
+```
 ### 动态传入时间参数
 
 ![](./node_file/img_3.png)
