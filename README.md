@@ -1,12 +1,10 @@
-# WebService
-![](./node_file/3.png)
+## WebService
 ### 手写一个web服务器
-
-###### 实现 HTTP Server 必知的前置知识既然，我们要实现 HTTP Server 那必然先要回顾一下 HTTP 协议相关的基础知识。HTTP 协议超文本传输协议（HTTP，HyperText Transfer Protocol)主要是为 Web 浏览器与 Web 服务器之间的通信而设计的。当我们使用浏览器浏览网页的时候，我们网页就是通过 HTTP 请求进行加载的，整个过程如下图所示。
+实现 HTTP Server 必知的前置知识既然，我们要实现 HTTP Server 那必然先要回顾一下 HTTP 协议相关的基础知识。HTTP 协议超文本传输协议（HTTP，HyperText Transfer Protocol)主要是为 Web 浏览器与 Web 服务器之间的通信而设计的。当我们使用浏览器浏览网页的时候，我们网页就是通过 HTTP 请求进行加载的，整个过程如下图所示。
 
 ![](./node_file/img_7.png)
 
-### 创建一个socket对象
+### 创建socket对象
 
 ```python
 server = socket.socket()
@@ -23,7 +21,6 @@ while True:
     conn.close()
 
 ```
-返回结果
 
 ![](./node_file/img_1.png)
 
@@ -47,7 +44,6 @@ while True:
 
 ```
 
-### 返回响应结果
 
 ![](./node_file/img.png)
 
@@ -74,7 +70,7 @@ while True:
     conn.close()
 
 ```
-通过浏览器向服务器发起请求访，服务器响应一个html页面
+通过浏览器向服务器发起访问请求，服务器响应一个html页面
 
 ![](./node_file/img_2.png)
 
@@ -106,7 +102,7 @@ while True:
 
 ### 通过wsgi接口实现更加完整的web服务
 
-###### wsgi_service.py
+wsgi_service.py
 ```python
 def application(environ,start_response):
     # 获取请求path
@@ -134,7 +130,7 @@ print('web服务器启动成功！%s:%s'%(addr,port))
 httped.serve_forever()
 ```
 
-###### urls.py
+urls.py
 ```python
 from views import *
 
@@ -145,7 +141,7 @@ url_patterns=[
     ]
 ```
 
-###### views.py
+views.py
 ```python
 from utils.read_data_utils import *
 
@@ -159,7 +155,7 @@ def favicon(environ):
 
 ```
 
-###### utils.py
+utils.py
 ```python
 def read_data(path):
     with open(path,'rb') as f:
