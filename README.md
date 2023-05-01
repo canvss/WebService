@@ -4,7 +4,7 @@
 
 实现 HTTP Server 必知的前置知识既然，我们要实现 HTTP Server 那必然先要回顾一下 HTTP 协议相关的基础知识。HTTP 协议超文本传输协议（HTTP，HyperText Transfer Protocol)主要是为 Web 浏览器与 Web 服务器之间的通信而设计的。当我们使用浏览器浏览网页的时候，我们网页就是通过 HTTP 请求进行加载的，整个过程如下图所示。
 
-![](imgs/img_7.png)
+![](https://canvs.oss-cn-chengdu.aliyuncs.com/canvs_typora/WebService/img_7.png)
 
 - **创建socket对象**
 
@@ -23,7 +23,7 @@ while True:
     conn.close()
 ```
 
-![](imgs/img_1.png)
+![](https://canvs.oss-cn-chengdu.aliyuncs.com/canvs_typora/WebService/img_1.png)
 
 > 访问127.0.0.1:8083,因为返回给浏览器数据(不符合http协议)，所以浏览器响应失败。
 
@@ -44,7 +44,7 @@ while True:
     conn.close()
 ```
 
-**<img src="imgs/img.png" style="zoom: 150%;" />**
+**<img src="https://canvs.oss-cn-chengdu.aliyuncs.com/canvs_typora/WebService/img.png" style="zoom: 200%;" />**
 
 - **响应HTML文件**
 
@@ -71,7 +71,7 @@ while True:
 
 > 通过浏览器向服务器发起访问请求，服务器响应一个html页面
 
-![](imgs/img_1.png)
+![](https://canvs.oss-cn-chengdu.aliyuncs.com/canvs_typora/WebService/img_1.png)
 
 - **replace给静态HTML传参**
 
@@ -98,7 +98,7 @@ while True:
 
 - **动态传入时间参数**
 
-<img src="imgs/img_3.png" width="100%" style="zoom:67%;" ></img>
+<img src="https://canvs.oss-cn-chengdu.aliyuncs.com/canvs_typora/WebService/img_3.png" width="100%" style="zoom:67%;" ></img>
 
 #### 通过wsgi接口实现更加完整的web服务
 
