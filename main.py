@@ -2,8 +2,8 @@
 """
 ------------------------------
 # @Date     :2021/7/11 22:13
-# @Author   :epover
-# @Email    :endliss@sina.cn
+# @Author   :canvs
+# @Email    :canvs@qq.com
 ------------------------------
 """
 import socket
